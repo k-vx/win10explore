@@ -117,5 +117,17 @@ function theme_int_set()
     }
 
 }
+// 解决php https签名错误
+add_action('http_request_args', 'jkudish_http_request_args', 10, 2);
+function jkudish_http_request_args($args, $url) {
+$args['sslverify'] = false;
+return $args;
+} // 解决php https签名错误
+
+
+add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+
+
+
 
 ?>

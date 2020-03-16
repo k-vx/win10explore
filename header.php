@@ -11,6 +11,7 @@
     <link rel="stylesheet"
           href="<?php echo get_stylesheet_directory_uri() . '/static/font-awesome/css/font-awesome.css' ?>"
           type="text/css"/>
+
     <?php wp_head(); ?>
 </head>
 <body>
