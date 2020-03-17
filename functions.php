@@ -117,17 +117,100 @@ function theme_int_set()
     }
 
 }
-// 解决php https签名错误
+// 解决php https签名错误（用于国内服务器使用wordpress反代更新主题及插件）
 add_action('http_request_args', 'jkudish_http_request_args', 10, 2);
 function jkudish_http_request_args($args, $url) {
 $args['sslverify'] = false;
 return $args;
-} // 解决php https签名错误
+}
 
-
+//开启链接管理
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 
+// 优化代码
+//去除头部冗余代码
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'wp_generator'); //隐藏wordpress版本
+remove_filter('the_content', 'wptexturize'); //取消标点符号转义
 
+function inspiration_init()
+{
+  $labels = [
+    'name' => __('灵感', 'origami'),
+    'singular_name' => __('灵感', 'origami'),
+    'add_new' => __('发表灵感', 'origami'),
+    'add_new_item' => __('发表灵感', 'origami'),
+    'edit_item' => __('编辑灵感', 'origami'),
+    'new_item' => __('新灵感', 'origami'),
+    'view_item' => __('查看灵感', 'origami'),
+    'search_items' => __('搜索灵感', 'origami'),
+    'not_found' => __('暂无灵感', 'origami'),
+    'not_found_in_trash' => __('没有已遗弃的灵感', 'origami'),
+    'parent_item_colon' => '',
+    'menu_name' => __('灵感', 'origami')
+  ];
+  $args = [
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'exclude_from_search' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => false,
+    'hierarchical' => false,
+    'menu_position' => null,
+    'show_in_rest' => true,
+    'supports' => ['editor', 'author', 'title', 'custom-fields']
+  ];
+  register_post_type('inspiration', $args);
+};
 
+add_action('init', 'inspiration_init');
+
+// 设置文章缩略图
+function theme_get_other_thumbnail($post)
+{
+  // <img.+src=[\'"]([^\'"]+)[\'"].+is-thum=[\'"]([^\'"]+)[\'"].*>
+  $image_url = false;
+  if (
+    preg_match(
+      '/\[image.+is-thum="true".+\]([^\'"]+)\[\/image]/i',
+      $post->post_content
+    ) != 0
+  ) {
+    preg_match_all(
+      '/\[image.+is-thum="true".+\]([^\'"]+)\[\/image]/i',
+      $post->post_content,
+      $matches
+    );
+    if (isset($matches[1][0])) {
+      $image_url = $matches[1][0];
+    }
+  }
+  if (
+    preg_match(
+      '/<img.+src=[\'"]([^\'"]+)[\'"].+(data-|)is-thum=[\'"]true[\'"].*>/i',
+      $post->post_content
+    ) != 0
+  ) {
+    preg_match_all(
+      '/<img.+src=[\'"]([^\'"]+)[\'"].+(data-|)is-thum=[\'"]true[\'"].*>/i',
+      $post->post_content,
+      $matches
+    );
+    if (isset($matches[1][0])) {
+      $image_url = $matches[1][0];
+    }
+  }
+  return $image_url;
+}
 
 ?>
