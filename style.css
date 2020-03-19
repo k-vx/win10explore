@@ -21,7 +21,7 @@
     min-height: 700px;
     margin-top: 20px;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
-    padding: 2px
+    padding: 0.5px
 }
 
 .postlist {
@@ -36,9 +36,11 @@
     height: 30px;
     float: right;
     background-blend-mode: lighten;
-    background-size: cover
+    background-size: cover;
 }
-
+.close a {
+    color: #fff!important;
+}
 .close:hover {
     background: red;
     color: #fff
@@ -50,7 +52,11 @@
 .blog-title {
     padding-left: 10px;
     user-select: none;
-    padding: 5px;
+    height: 30px;
+    line-height: 30px;
+    color:white;
+    background:black;
+    font-size:10px;
 }
 
 .content {
@@ -999,3 +1005,114 @@ span.linkss-title {
   overflow: hidden;
   word-wrap: break-word;
 }
+
+.homes {
+    margin-bottom: 80px
+}
+
+.homes ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: inline-block
+}
+
+.homes ul li {
+    width: 20%;
+    float: left;
+    padding: 2.5px 30px;
+    margin: 4px 4px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border-radius: 10px
+}
+
+.homes ul li img {
+    float: left;
+    padding: 5px;
+    opacity: 1;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transition: all ease 1s;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    margin-top: 5px;
+    width: 65px;
+    height: 65px;
+}
+
+
+span.sitename {
+    padding-top: 5px;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap
+}
+span.sitedescraption {
+    text-decoration: none;
+    padding-bottom: 10px;
+    display: inline-block;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.home-title {
+    font-weight: 400;
+    color: rgb(31,87,197);
+    padding-left: 10px;
+    border-left: none;
+}
+
+.home-title:hover {
+    background-color: rgb(229,243,255);
+    border: 0px solid #e5f3ff
+}
+
+.home-title span.home-fix {
+    padding-left:10px;
+}
+
+.homes ul li:before {
+    content: "";
+    -webkit-transform: skew(45deg, 0);
+    transform: skew(45deg, 0);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    z-index: -1;
+    -webkit-transition: all .5s;
+    transition: all .5s
+}
+
+
+
+.homes ul li:hover:before {
+    width: 180%
+}
+
+.homes ul li:hover .homedes {
+    border-top: 1px dashed #fff
+}
+
+.notification-hidden {
+    display: none
+}
+

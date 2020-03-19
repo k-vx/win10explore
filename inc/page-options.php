@@ -16,6 +16,7 @@ global $theme_option;
             <li>SEO设置</li>
             <li>外观设置</li>
             <li>可用组件</li>
+            <li>主页设置</li>
             <li class="layui-this">关于主题</li>
         </ul>
         <div class="layui-tab-content">
@@ -117,6 +118,75 @@ global $theme_option;
                             class="layui-icon layui-icon-link"></i>awesome字体图标</a>
                 <hr>
             </div>
+            <div class="layui-tab-item">
+                <div class="layui-form theme-set-from" action="">
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">3D 对象</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_3D_Objects" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_3D_Objects'] ?>">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">视频</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_Videos" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_Videos'] ?>">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">图片</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_Pictures" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_Pictures'] ?>">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">文档</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_Documents" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_Documents'] ?>">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">下载</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_Download" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_Download'] ?>">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">音乐</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_Music" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_Music'] ?>">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">桌面</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_Desktop" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_Desktop'] ?>">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="theme-set-title">最近文章</div>
+                        <div class="theme-set-control">
+                            <input type="text" name="folder_Articals" class="theme-set-input"
+                                   value="<?php echo $theme_option['folder_Articals'] ?>">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
             <div class="layui-tab-item layui-show">
                 <h3> 仿Win10资源管理器主题</h3>
                 <br><br>
@@ -193,6 +263,14 @@ global $theme_option;
             var site_name = $("input[name=site-name]").val();
             var single_icon = $("input[name=single-icon]").val();
             var title_icon = $("input[name=title-icon]").val();
+            var folder_3D_Objects = $("input[name=folder_3D_Objects]").val();
+            var folder_Videos = $("input[name=folder_Videos]").val();
+            var folder_Pictures = $("input[name=folder_Pictures]").val();
+            var folder_Documents = $("input[name=folder_Documents]").val();
+            var folder_Download = $("input[name=folder_Download]").val();
+            var folder_Music = $("input[name=folder_Music]").val();
+            var folder_Desktop = $("input[name=folder_Desktop]").val();
+            var folder_Articals = $("input[name=folder_Articals]").val();
             var data = {
                 action: 'save_set',
                 seo: switch_seo,
@@ -202,7 +280,16 @@ global $theme_option;
                 index_title: index_title,
                 site_name: site_name,
                 title_icon: title_icon,
-                single_icon: single_icon
+                single_icon: single_icon,
+                folder_3D_Objects: folder_3D_Objects,
+                folder_Videos: folder_Videos,
+                folder_Pictures: folder_Pictures,
+                folder_Documents: folder_Documents,
+                folder_Download: folder_Download,
+                folder_Music: folder_Music,
+                folder_Desktop: folder_Desktop,
+                folder_Articals: folder_Articals
+
             }
             $.post("<?php echo admin_url('admin-ajax.php');?>", data, function (data) {
                     if (data == 1) {

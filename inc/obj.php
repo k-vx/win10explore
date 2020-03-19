@@ -283,9 +283,9 @@ function get_the_link_items($id = null){
   if ( !empty($bookmarks) ) {
       $output .= '<ul class="link-items fontSmooth">';
       foreach ($bookmarks as $bookmark) {
-		if (empty($bookmark->link_description)) $bookmark->link_description = __('This guy is so lazy ╮(╯▽╰)╭', 'sakura');
-		if (empty($bookmark->link_image)) $bookmark->link_image = 'https://view.moezx.cc/images/2017/12/30/Transparent_Akkarin.th.jpg';
-        $output .=  '<li class="link-item"><a class="link-item-inner effect-apollo" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" rel="friend"><img class="lazyload" onerror="imgError(this,1)" src="http://cdn.qwqdanchun.cn/image/blog/file.png"><span class="sitename">'. $bookmark->link_name .'</span></a></li>';
+		if (empty($bookmark->link_description)) $bookmark->link_description = __('This guy is so lazy ╮(╯▽╰)╭', 'qwqdanchun');
+		if (empty($bookmark->link_image)) $bookmark->link_image = 'http://cdn.qwqdanchun.cn/image/blog/empty.jpg';
+        $output .=  '<li class="link-item"><a class="link-item-inner effect-apollo" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" rel="friend"><img src="http://cdn.qwqdanchun.cn/image/blog/file.png"><span class="sitename">'. $bookmark->link_name .'</span></a></li>';
       }
       $output .= '</ul>';
   }
