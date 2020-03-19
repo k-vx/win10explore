@@ -1,10 +1,9 @@
-<?php 
-
+<?php
 /**
  Template Name: home
  */
-
 get_header();
+the_post();
 ?>
 <div class="layui-container" id="main">
     <div class="blog-title"><img class="toobar-icon" src="<?php echo getImgDir('folder.ico') ?>"
@@ -45,7 +44,7 @@ get_header();
         </div>
         <div class="layui-col-md10 post-content">
             <div class="post-content-content">
-
+               
    <div class="homes"> 
     <h3 class="home-title"><span class="home-fix">常用文件夹(7)</span></h3> 
     <ul class="home-items fontSmooth"> 
@@ -77,18 +76,14 @@ get_header();
 
     
    </div> 
-  <div class="have-toc"></div> 
-  <div class="toc-container"> 
-   <div class="toc"></div> 
-  </div> 
-
-
+            </div>
 
         </div>
 
     </div>
 </div>
+
+</body>
 <?php get_footer() ?>
 <?php wp_footer(); ?>
-</body>
 </html>

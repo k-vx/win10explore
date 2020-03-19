@@ -67,7 +67,8 @@ get_header();
 
     </div>
 </div>
+
+</body>
 <?php get_footer() ?>
 <?php wp_footer(); ?>
-</body>
 </html>

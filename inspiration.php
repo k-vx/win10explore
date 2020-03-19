@@ -145,7 +145,8 @@ the_post();
 </div>
     </div>
 </div>
+
+</body>
 <?php get_footer() ?>
 <?php wp_footer(); ?>
-</body>
 </html>
