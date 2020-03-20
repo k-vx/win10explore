@@ -24,7 +24,7 @@ function fun_save_set()
 }
 function fun_check_version(){
     $http = new WP_Http;
-    $result = $http->request( 'https://www.lovestu.com/api/theme.php?a=checkversion&theme=win10exp' );
+    $result = $http->request( 'http://cdn.qwqdanchun.cn/win10_theme.json' );
 
     $result= json_decode($result['body'], true);
     if (is_array($result)){

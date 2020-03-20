@@ -188,24 +188,18 @@ global $theme_option;
                 </div>
             </div>
             <div class="layui-tab-item layui-show">
-                <h3> 仿Win10资源管理器主题</h3>
+                <h3> Win10资源管理器主题</h3>
                 <br><br>
                 <div class="layui-form-item">
                     <div class="theme-set-title">说明地址</div>
                     <div class="theme-set-control">
-                        <a href="https://www.lovestu.com/win10explorer" target="_blank">https://www.lovestu.com/win10explorer</a>
+                        <a href="https://github.com/qwqdanchun/win10explore" target="_blank">https://github.com/qwqdanchun/win10explore</a>
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <div class="theme-set-title">当前版本：1.3 <p id="theme-version">最新版本：等待检查中</p></div>
+                    <div class="theme-set-title">当前版本：1.0 <p id="theme-version">最新版本：等待检查中</p></div>
                     <div class="theme-set-control">
                         <button class="layui-btn layui-btn-normal" onclick="clickversion()">检查更新</button>
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <div class="theme-set-title">捐赠支持</div>
-                    <div class="theme-set-control">
-                        <img src="<?php echo getImgDir('ewmsk.png')?>" width="253" height="300">
                     </div>
                 </div>
             </div>

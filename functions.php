@@ -1,8 +1,8 @@
 <?php
 //获取设置
-define('THEME_ID', 'lovestutheme01'); // 主题ID，请勿修改,否则可能导致配置错误
-define('THEME_VERSION', '1.3.0'); // 主题内部版本号，请勿修改，否则可能导致配置错误
-define('THEME_ID_SET', 'lovestutheme01_set');
+define('THEME_ID', 'qwqdanchun_win10'); // 主题ID，请勿修改,否则可能导致配置错误
+define('THEME_VERSION', '1.0.0'); // 主题内部版本号，请勿修改，否则可能导致配置错误
+define('THEME_ID_SET', 'qwqdanchun_win10_set');
 
 global $theme_option;
 
