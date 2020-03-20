@@ -13,4 +13,4 @@
 ## LICENSE  
 遵循GPL协议，非商业用途免费使用  
 ## 演示&地址
-[https://www.lovestu.com/](https://blog.qwqdanchun.cn/)  
+[https://blog.qwqdanchun.cn/](https://blog.qwqdanchun.cn/)  
