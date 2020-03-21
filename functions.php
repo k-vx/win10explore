@@ -1,8 +1,8 @@
 <?php
 //获取设置
-define('THEME_ID', 'qwqdanchun_win10'); // 主题ID，请勿修改,否则可能导致配置错误
+define('THEME_ID', 'win10exp'); // 主题ID，请勿修改,否则可能导致配置错误
 define('THEME_VERSION', '1.0.0'); // 主题内部版本号，请勿修改，否则可能导致配置错误
-define('THEME_ID_SET', 'qwqdanchun_win10_set');
+define('THEME_ID_SET', 'win10exp_set');
 
 global $theme_option;
 
@@ -81,11 +81,11 @@ function my_comment($comment, $args, $depth)
     </div>
     <div class="comment-metadata">
         <span class="comment-pub-time">
-   				<?php echo get_comment_time('Y-m-d H:i'); ?>
-   			</span>
+          <?php echo get_comment_time('Y-m-d H:i'); ?>
+        </span>
         <span class="comment-btn-reply">
- 				<i class="fa fa-reply"></i> <?php comment_reply_link(array_merge($args, array('reply_text' => '回复', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-   			</span>
+        <i class="fa fa-reply"></i> <?php comment_reply_link(array_merge($args, array('reply_text' => '回复', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+        </span>
     </div>
 
     <?php
@@ -141,18 +141,18 @@ remove_filter('the_content', 'wptexturize'); //取消标点符号转义
 function inspiration_init()
 {
   $labels = [
-    'name' => __('灵感', 'origami'),
-    'singular_name' => __('灵感', 'origami'),
-    'add_new' => __('发表灵感', 'origami'),
-    'add_new_item' => __('发表灵感', 'origami'),
-    'edit_item' => __('编辑灵感', 'origami'),
-    'new_item' => __('新灵感', 'origami'),
-    'view_item' => __('查看灵感', 'origami'),
-    'search_items' => __('搜索灵感', 'origami'),
-    'not_found' => __('暂无灵感', 'origami'),
-    'not_found_in_trash' => __('没有已遗弃的灵感', 'origami'),
+    'name' => __('灵感', 'win10exp'),
+    'singular_name' => __('灵感', 'win10exp'),
+    'add_new' => __('发表灵感', 'win10exp'),
+    'add_new_item' => __('发表灵感', 'win10exp'),
+    'edit_item' => __('编辑灵感', 'win10exp'),
+    'new_item' => __('新灵感', 'win10exp'),
+    'view_item' => __('查看灵感', 'win10exp'),
+    'search_items' => __('搜索灵感', 'win10exp'),
+    'not_found' => __('暂无灵感', 'win10exp'),
+    'not_found_in_trash' => __('没有已遗弃的灵感', 'win10exp'),
     'parent_item_colon' => '',
-    'menu_name' => __('灵感', 'origami')
+    'menu_name' => __('灵感', 'win10exp')
   ];
   $args = [
     'labels' => $labels,

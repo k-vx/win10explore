@@ -256,21 +256,21 @@ function obj_title_icon()
 
 if ( ! function_exists( 'win10_option' ) ) {
 
-	function win10_option( $name, $default = false ) {
-		$config = get_option( 'optionsframework' );
+    function win10_option( $name, $default = false ) {
+        $config = get_option( 'optionsframework' );
 
-		if ( ! isset( $config['id'] ) ) {
-			return $default;
-		}
+        if ( ! isset( $config['id'] ) ) {
+            return $default;
+        }
 
-		$options = get_option( $config['id'] );
+        $options = get_option( $config['id'] );
 
-		if ( isset( $options[$name] ) ) {
-			return $options[$name];
-		}
+        if ( isset( $options[$name] ) ) {
+            return $options[$name];
+        }
 
-		return $default;
-	}
+        return $default;
+    }
 }
 
 
@@ -283,8 +283,8 @@ function get_the_link_items($id = null){
   if ( !empty($bookmarks) ) {
       $output .= '<ul class="link-items fontSmooth">';
       foreach ($bookmarks as $bookmark) {
-		if (empty($bookmark->link_description)) $bookmark->link_description = __('This guy is so lazy ╮(╯▽╰)╭', 'sakura');
-		if (empty($bookmark->link_image)) $bookmark->link_image = 'https://view.moezx.cc/images/2017/12/30/Transparent_Akkarin.th.jpg';
+        if (empty($bookmark->link_description)) $bookmark->link_description = __('This guy is so lazy ╮(╯▽╰)╭', 'win10exp');
+        if (empty($bookmark->link_image)) $bookmark->link_image = 'http://cdn.qwqdanchun.cn/image/blog/empty.jpg';
         $output .=  '<li class="link-item"><a class="link-item-inner effect-apollo" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" rel="friend"><img class="lazyload" onerror="imgError(this,1)" src="http://cdn.qwqdanchun.cn/image/blog/file.png"><span class="sitename">'. $bookmark->link_name .'</span></a></li>';
       }
       $output .= '</ul>';
@@ -294,15 +294,15 @@ function get_the_link_items($id = null){
 
 function get_link_items(){
   $linkcats = get_terms( 'link_category','orderby=id&category_orderby=id&hide_empty=0');
-  	if ( !empty($linkcats) ) {
-      	foreach( $linkcats as $linkcat){            
-        	$result .=  '<h3 class="link-title"><span class="link-fix">'.$linkcat->name.'</span></h3>';
-        	if( $linkcat->description ) $result .= '<div class="link-description">' . $linkcat->description . '</div>';
-        	$result .=  get_the_link_items($linkcat->term_id);
-      	}
-  	} else {
-    	$result = get_the_link_items();
-  	}
+    if ( !empty($linkcats) ) {
+        foreach( $linkcats as $linkcat){            
+            $result .=  '<h3 class="link-title"><span class="link-fix">'.$linkcat->name.'</span></h3>';
+            if( $linkcat->description ) $result .= '<div class="link-description">' . $linkcat->description . '</div>';
+            $result .=  get_the_link_items($linkcat->term_id);
+        }
+    } else {
+        $result = get_the_link_items();
+    }
   return $result;
 }
 
