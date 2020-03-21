@@ -65,10 +65,10 @@ the_post();
 
 
     </ul> 
-    <h3 class="home-title"><span class="home-fix">设备和驱动器(3)</span></h3> 
+    <h3 class="home-title"><span class="home-fix">设备和驱动器(1)</span></h3> 
     <ul class="home-items fontSmooth"> 
 
-    <li class="home-item"><a class="home-item-inner effect-apollo" href="<?php echo $theme_option['folder_Articals'] ?>" title="最近文章" target="_blank" rel="friend"><img class="lazyload" onerror="imgError(this,1)" src="http://cdn.qwqdanchun.cn/image/blog/folder_Articals.png" /><span class="sitename">最近文章</span></a></li> 
+    <li class="home-item"><a class="home-item-inner effect-apollo" href="<?php echo $theme_option['folder_Articals'] ?>" title="最近文章" target="_blank" rel="friend"><img class="lazyload" onerror="imgError(this,1)" src="http://cdn.qwqdanchun.cn/image/blog/folder_OS.png" /><span class="sitename">系统(C:)</span></a><div class="progress-bar"><div class="progress"></div></div><a class="disk_size">66.6 GB 可用, 共 118 GB</a></li> 
 
     </ul> 
 
