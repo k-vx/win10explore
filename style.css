@@ -1025,7 +1025,7 @@ span.linkss-title {
     margin: 0;
     list-style: none;
     padding-left: 30px;
-    width: 100%;
+    width: 95%;
     display: inline-block
 }
 
@@ -1155,13 +1155,16 @@ span.sitedescraption {
     line-height: 30px;
 }
 @media screen and (max-width: 991px){
-	.progress-bar{
-			display: none
-	}
-	.progress{
-		display: none
-	}
-	.disk_size{
-		display: none
-	}
+    .progress-bar{
+            display: none
+    }
+    .progress{
+        display: none
+    }
+    .disk_size{
+        display: none
+    }
+    .egg{
+        display: none
+    }
 }
