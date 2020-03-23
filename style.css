@@ -1154,6 +1154,11 @@ span.sitedescraption {
 .disk_size{
     line-height: 30px;
 }
+
+.post-content-content a{
+    color:rgb(0,160,210);
+}
+
 @media screen and (max-width: 991px){
     .progress-bar{
             display: none
