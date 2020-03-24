@@ -187,6 +187,7 @@ th {
 
 .toolbar-url {
     cursor: default;
+    margin-top:5px;
     border: 1px solid #ebeef5
 }
 
@@ -203,6 +204,7 @@ th {
 
 .toolbar-search {
     margin-left: 10px;
+    margin-top:5px;
     border: 1px solid #ebeef5
 }
 
@@ -220,6 +222,7 @@ th {
     font-weight: lighter;
     text-align: center;
     color: #808080;
+    margin-top:5px;
     line-height: 30px
 }
 
@@ -297,7 +300,7 @@ footer {
 }
 
 .menu_header li {
-    padding: 5px 10px
+    padding: 2px 10px
 }
 
 .menu_header > li {
@@ -771,7 +774,8 @@ span.sitename {
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
+    color: black
 }
 
 .linkdes {
@@ -1153,10 +1157,15 @@ span.sitedescraption {
 }
 .disk_size{
     line-height: 30px;
+    color: black!important
 }
 
 .post-content-content a{
     color:rgb(0,160,210);
+}
+
+.menu_nav{
+    border-bottom:1px solid #e5f3ff
 }
 
 @media screen and (max-width: 991px){
