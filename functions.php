@@ -213,4 +213,21 @@ function theme_get_other_thumbnail($post)
   return $image_url;
 }
 
+//自动生成站点地图
+if ( !defined('WIN_SITEMAP_PATH') )
+  define('WIN_SITEMAP_PATH', dirname(__FILE__) . '/');
+function win_sitemap_refresh() {
+    require_once(WIN_SITEMAP_PATH.'extend/xml.php');
+    $sitemap_xml = win_get_xml_sitemap();
+    file_put_contents(ABSPATH.'sitemap.xml', $sitemap_xml);
+    require_once(WIN_SITEMAP_PATH.'extend/html.php');
+    $sitemap_html = win_get_html_sitemap();
+    file_put_contents(ABSPATH.'sitemap.html', $sitemap_html);
+}
+if ( defined('ABSPATH') ) {
+    add_action('publish_post', 'win_sitemap_refresh');
+    add_action('save_post', 'win_sitemap_refresh');
+    add_action('edit_post', 'win_sitemap_refresh');
+    add_action('delete_post', 'win_sitemap_refresh');
+}
 ?>
