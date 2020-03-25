@@ -1,6 +1,8 @@
 ## 主题介绍 
 基于ghboke(https://github.com/ghboke) 的主题win10explorer进行二开，尽量在保持ui风格的前提下，会根据自己使用添加一些常见功能
 ## 更新日志
+2020-3-25  
+添加自动生成sitemap  
 2020-3-21  
 修复bug，少量调整css  
 2020-3-20  
